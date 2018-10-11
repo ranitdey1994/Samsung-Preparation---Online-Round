@@ -25,19 +25,22 @@ class QEntry {
      * Creates a new QEntry object
      * @param x : abscissa
      * @param y : ordinate
-     * @param dist : 
+     * @param dist : updated distance value
      */
     public QEntry(int x, int y, int dist) {
         this.x = x;
         this.y = y;
         this.dist = dist;
     }
+    /* returns the abscissa for the point */
     public int getAbscissa() {
         return x;
     }
+    /* returns the ordinate for the point */
     public int getOrdinate() {
         return y;
     }
+    /* returns the distance for the point */
     public int getDist() {
         return dist;
     }
@@ -137,6 +140,11 @@ class ResearchCenterMain {
         return (x >= 0 && x < n && y >= 0 && y < n && mat[x][y] && !visited[x][y]);
     }
     
+    /**
+     * A utility function to reset the ans matrix
+     * @param ans : stores all the updated distance values  
+     * @param n   : no. of roads which are given as i/p 
+     */
     public static void setAns(int ans[][], int n) {
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
