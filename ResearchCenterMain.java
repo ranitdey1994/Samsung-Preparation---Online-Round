@@ -86,9 +86,8 @@ class MyQueue {
             arr[rear] = in;
         }
     }
-    /**
-     * A function to delete an element from the queue
-     */
+    
+    /* A function to delete an element from the queue */
     public QEntry delete() {
         if(front == -1) {
             System.out.println("Queue is empty");
@@ -105,9 +104,8 @@ class MyQueue {
             front++;
         return qItem;
     }
-    /**
-     * A function which checks if queue is empty or not
-     */
+   
+    /* A function which checks if queue is empty or not */
     public boolean isEmpty() {
         return (front == -1 && rear == -1);
     }
